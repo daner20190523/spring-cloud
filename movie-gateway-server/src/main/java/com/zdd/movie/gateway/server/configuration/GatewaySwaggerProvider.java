@@ -37,6 +37,7 @@ public class GatewaySwaggerProvider implements SwaggerResourcesProvider {
                             .filter(predicateDefinition -> ("Path").equals(predicateDefinition.getName()
                             ))
                             .forEach(predicateDefinition -> {
+                                System.out.println("修改完事儿了");
 //                                System.out.println(routeDefinition.getId());
 //                                System.out.println(predicateDefinition.getArgs().get("\"pattern\"").replace("/**",API_URL));
                                 swaggerResourceList.add(swaggerResource(routeDefinition.getId(),predicateDefinition.getArgs().get("\"pattern\"").replace("/**",API_URL)));
